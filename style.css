@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+    background: #4e2f2f;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+#input-title,
+#input-content {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+.profile-image {
+  width: 100px; /* Or any desired size */
+  /*height: 100px; *//* Must match width for a perfect circle */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image fills the circular area without distortion */
+  object-position: right; /* Centers the image within the circular area */
+  border: 3px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%; /* Prevents the image from exceeding its container's width */
+  height: auto; 
+}
+
+.profile-image:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li h3{
+    list-style: none;
+}
