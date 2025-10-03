@@ -83,7 +83,7 @@ postForm.addEventListener("submit", function (event) {
       title: userInputTitle,
       content: userInputContent,
     };
-    posts.push(newPost); // Optional: keep track of all posts
+    posts.push(newPost); 
 
     // store to localstorage
     localStorage.setItem("allPosts", JSON.stringify(posts));
@@ -96,12 +96,13 @@ postForm.addEventListener("submit", function (event) {
         <p>${newPost.content}</p>
     `;
 
+    // create the edit button dynamically
     const editButn = document.createElement("button");
     editButn.textContent = "Edit";
     editButn.classList.add("edit");
     li.appendChild(editButn);
 
-    //create the remove button
+    //create the remove button dynamically
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.classList.add("delete"); //adding a class remove ( THIS IS A CSS CLASS)
@@ -131,6 +132,7 @@ postForm.addEventListener("submit", function (event) {
   console.log(userInputTitle);
 });
 
+//everytime the window loads this happens
 window.addEventListener("DOMContentLoaded", function (event) {
   posts.forEach((post, index) => {
     const li = document.createElement("li");
@@ -152,9 +154,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
     postList.appendChild(li);
 
-    // Attach event listeners for edit and delete just like in your submit handler
+    // Attach event listeners for edit and delete similar to what is done in submit handler
     deleteBtn.addEventListener("click", function () {
-      posts.splice(index, 1); // remove from array
+      posts.splice(index, 1); // remove one object at a given index from array
       localStorage.setItem("allPosts", JSON.stringify(posts));
       li.remove();
     });
