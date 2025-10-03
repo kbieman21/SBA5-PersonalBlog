@@ -60,6 +60,17 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-ul li h3{
+/* ul li h3{
     list-style: none;
+} */
+
+ul.postLists{
+  list-style: none;
+  padding: 0;
+}
+
+.error-title,
+.error-content {
+  color: red;
+  font-size: 0.9em;
 }
