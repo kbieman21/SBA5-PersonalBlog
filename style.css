@@ -27,6 +27,7 @@ button {
   border: none;
   padding: 0.75rem 1rem;
   cursor: pointer;
+  
 }
 
 button:hover {
@@ -66,6 +67,7 @@ main {
 
 ul.postLists{
   list-style: none;
+  text-align: center;
   padding: 0;
 }
 
@@ -74,3 +76,12 @@ ul.postLists{
   color: red;
   font-size: 0.9em;
 }
+
+.edit{
+  text-align: left;
+}
+
+.delete{
+  text-align: right;
+}
+
